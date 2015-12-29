@@ -1,4 +1,3 @@
 packages/
-RideWizz/bin/
-RideWizz/obj/
-Tests/obj/
+*bin*
+*obj*
