@@ -1,4 +1,5 @@
-﻿@{
+﻿@model RideWizz.Models.CarsOutputModel
+@{
     ViewBag.Title = "All Cars";
 }
 
@@ -6,4 +7,16 @@
     @Scripts.Render("~/Scripts/Cars.js")
 }
 
-<div class="header">Welcome to RideWizz!</div>
+<div class="logo"><img src="~/Images/logo.png" title="RideWizz!" /></div>
+
+<div class="header-text">Welcome to RideWizz, the premier randomly generated car data website on the internet!</div>
+
+@foreach (var car in Model.AllCars) {
+    <div style="margin: 20px">
+        <div>Year: @car.Year</div>
+        <div>Make: @car.Make</div>
+        <div>Model: @car.Model</div>
+        <div>Price: @car.Price</div>
+        <div>Mileage: @car.Mileage</div>
+    </div>
+}
