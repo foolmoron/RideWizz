@@ -15,9 +15,9 @@ namespace Data.Repositories {
         static readonly string[] MAKES = { "Toyota", "Honda", "Fiat", "Volkswagen", "Tesla", "Ford" };
         static readonly string[] MODELS = { "Super", "Crazy", "Regular", "Black", "Potato", "Whatever" };
         static readonly int PRICE_MIN = 10000;
-        static readonly int PRICE_MAX = 100000;
+        static readonly int PRICE_MAX = 150000;
         static readonly int MILEAGE_MIN = 100;
-        static readonly int MILEAGE_MAX = 999999999;
+        static readonly int MILEAGE_MAX = 1100000;
         static readonly string[] IMAGES = { "car1.jpg", "car2.png", "car3.jpg", "car4.jpg" };
 
         public IEnumerable<Car> GetAll(int count = 10) {
