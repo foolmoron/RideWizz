@@ -11,6 +11,8 @@
 
 <div class="header-text">Welcome to RideWizz, the premier randomly generated car data website on the internet!</div>
 
+<div class="car-links">Show me: <a href="@Url.Action("Index", "Cars", new { id = 1 })">1 car!</a> <a href="@Url.Action("Index", "Cars", new { id = 10 })">10 cars!</a> <a href="@Url.Action("Index", "Cars", new { id = 50 })">50 cars!</a></div>
+
 <div class="car-container">
     @foreach (var car in Model.AllCars) {
         <div class="car">

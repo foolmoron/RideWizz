@@ -6,7 +6,7 @@ using Data.Models;
 
 namespace Data.Repositories {
     public interface ICarRepository {
-        IEnumerable<Car> GetAll();
+        IEnumerable<Car> GetAll(int count);
     }
     public class CarRepository : ICarRepository {
 
@@ -20,15 +20,14 @@ namespace Data.Repositories {
         static readonly int MILEAGE_MAX = 999999999;
         static readonly string[] IMAGES = { "car1.jpg", "car2.png", "car3.jpg", "car4.jpg" };
 
-        public IEnumerable<Car> GetAll() {
+        public IEnumerable<Car> GetAll(int count = 10) {
             // could read from a file
             // or query a database
             // or make a web request
 
             // but we'll just generate some random data for now
-            const int COUNT = 34;
             var r = new Random();
-            for (var i = 0; i < COUNT; i++) {
+            for (var i = 0; i < count; i++) {
                 yield return new Car {
                     Year = r.Next(YEAR_MIN, YEAR_MAX),
                     Make = MAKES[r.Next(MAKES.Length - 1)],

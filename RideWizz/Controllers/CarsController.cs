@@ -16,8 +16,8 @@ namespace RideWizz.Controllers {
             this.carRepository = carRepository;
         }
 
-        public ActionResult Index() {
-            var allCars = carRepository.GetAll();
+        public ActionResult Index(int id = 24) {
+            var allCars = carRepository.GetAll(id);
             var allCarsRoundedMileage = allCars.Select(car => {
                 car.Mileage = VeryComplexMathEngine.RoundToNearestThousand(car.Mileage);
                 return car;

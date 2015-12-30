@@ -21,6 +21,15 @@
     margin-bottom: 30px;
 }
 
+.car-links {
+    font-weight: bold;
+}
+
+.car-links a {
+    margin-left: 10px;
+    margin-right: 4px;
+}
+
 .car-container {
     width: 100%;
     max-width: 1400px;
