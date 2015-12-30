@@ -25,7 +25,7 @@ namespace Data.Repositories {
             // or make a web request
 
             // but we'll just generate some random data for now
-            const int COUNT = 30;
+            const int COUNT = 34;
             var r = new Random();
             for (var i = 0; i < COUNT; i++) {
                 yield return new Car {
