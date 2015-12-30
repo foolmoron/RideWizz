@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Data.Repositories;
 using RideWizz.Models;
+using RideWizz.Utilities;
 
 namespace RideWizz.Controllers {
     public class CarsController : Controller {
@@ -16,8 +17,13 @@ namespace RideWizz.Controllers {
         }
 
         public ActionResult Index() {
+            var allCars = carRepository.GetAll();
+            var allCarsRoundedMileage = allCars.Select(car => {
+                car.Mileage = VeryComplexMathEngine.RoundToNearestThousand(car.Mileage);
+                return car;
+            });
             var model = new CarsOutputModel {
-                AllCars = carRepository.GetAll()
+                AllCars = allCarsRoundedMileage
             };
             return View(model);
         }

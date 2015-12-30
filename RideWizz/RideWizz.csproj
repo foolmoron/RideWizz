@@ -134,6 +134,7 @@
     </Compile>
     <Compile Include="Models\CarsOutputModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\VeryComplexMathEngine.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
