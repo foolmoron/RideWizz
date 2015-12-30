@@ -1,4 +1,5 @@
 ﻿body {
+    background-color: #dadada;
     padding-top: 0px;
     padding-bottom: 120px;
     text-align: center;
@@ -17,7 +18,6 @@
 }
 
 .car-container {
-    background: orange;
     width: 100%;
     max-width: 1400px;
     margin: auto;
@@ -27,8 +27,29 @@
 }
 
 .car {
-    background: pink;
+    background: white;
     width: 240px;
-    height: 140px;
+    height: 150px;
+    padding-top: 3px;
     margin: 10px;
+    border-radius: 6px;
+}
+
+.car .image {
+    max-height: 50%;
+}
+
+.car .info {
+    font-weight: bold;
+}
+
+.car .mileage {
+    font-style: italic;
+    font-size: 1.1em;
+}
+
+.car .price {
+    color: green;
+    font-size: 1.4em;
+    font-weight: bold;
 }

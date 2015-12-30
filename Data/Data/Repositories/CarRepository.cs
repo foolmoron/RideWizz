@@ -18,6 +18,7 @@ namespace Data.Repositories {
         static readonly int PRICE_MAX = 100000;
         static readonly int MILEAGE_MIN = 100;
         static readonly int MILEAGE_MAX = 999999999;
+        static readonly string[] IMAGES = { "car1.jpg", "car2.png", "car3.jpg", "car4.jpg" };
 
         public IEnumerable<Car> GetAll() {
             // could read from a file
@@ -34,6 +35,8 @@ namespace Data.Repositories {
                     Model = MODELS[r.Next(MODELS.Length - 1)],
                     Price = r.Next(PRICE_MIN, PRICE_MAX),
                     Mileage = r.Next(MILEAGE_MIN, MILEAGE_MAX),
+                    Image = IMAGES[r.Next(IMAGES.Length - 1)],
+                    HueRotation = r.Next(0, 360),
                 };
             }
         }

@@ -14,11 +14,10 @@
 <div class="car-container">
     @foreach (var car in Model.AllCars) {
         <div class="car">
-            <div>Year: @car.Year</div>
-            <div>Make: @car.Make</div>
-            <div>Model: @car.Model</div>
-            <div>Price: @car.Price</div>
-            <div>Mileage: @car.Mileage</div>
+            <img class="image" src="~/Images/@car.Image" style="-webkit-filter: hue-rotate(@(car.HueRotation)deg); filter: hue-rotate(@(car.HueRotation)deg);" />
+            <div class="info">@car.Year @car.Make @car.Model</div>
+            <div class="mileage">@car.Mileage.ToString("N0") miles</div>
+            <div class="price">@car.Price.ToString("C0")</div>
         </div>
     }
 </div>
