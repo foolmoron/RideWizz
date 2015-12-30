@@ -14,10 +14,12 @@
 <div class="car-container">
     @foreach (var car in Model.AllCars) {
         <div class="car">
-            <img class="image" src="~/Images/@car.Image" style="-webkit-filter: hue-rotate(@(car.HueRotation)deg); filter: hue-rotate(@(car.HueRotation)deg);" />
+            <img class="image" src="~/Images/@car.Image" style="-webkit-filter: hue-rotate(@(car.HueRotation)deg); filter: hue-rotate(@(car.HueRotation)deg);"/>
             <div class="info">@car.Year @car.Make @car.Model</div>
             <div class="mileage">@car.Mileage.ToString("N0") miles</div>
             <div class="price">@car.Price.ToString("C0")</div>
         </div>
     }
 </div>
+
+<div class="credits">This is a web dev speed exercise by <a href="http://foolmoron.io/">Momin Khan</a></div>
