@@ -11,12 +11,14 @@
 
 <div class="header-text">Welcome to RideWizz, the premier randomly generated car data website on the internet!</div>
 
-@foreach (var car in Model.AllCars) {
-    <div style="margin: 20px">
-        <div>Year: @car.Year</div>
-        <div>Make: @car.Make</div>
-        <div>Model: @car.Model</div>
-        <div>Price: @car.Price</div>
-        <div>Mileage: @car.Mileage</div>
-    </div>
-}
+<div class="car-container">
+    @foreach (var car in Model.AllCars) {
+        <div class="car">
+            <div>Year: @car.Year</div>
+            <div>Make: @car.Make</div>
+            <div>Model: @car.Model</div>
+            <div>Price: @car.Price</div>
+            <div>Mileage: @car.Mileage</div>
+        </div>
+    }
+</div>
