@@ -9,9 +9,15 @@ using RideWizz.Models;
 namespace RideWizz.Controllers {
     public class CarsController : Controller {
 
+        readonly ICarRepository carRepository;
+
+        public CarsController(ICarRepository carRepository) {
+            this.carRepository = carRepository;
+        }
+
         public ActionResult Index() {
             var model = new CarsOutputModel {
-                AllCars = new CarRepository().GetAll()
+                AllCars = carRepository.GetAll()
             };
             return View(model);
         }
